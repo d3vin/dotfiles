@@ -11,3 +11,12 @@ alias ..='cd ..'
 
 # shortcut to move up two directory trees
 alias ...='cd .. ; ..'
+
+# shortcut to get pbcopy/pbpaste in ubuntu
+if [ $(uname) != 'Darwin' ]; then
+	alias pbcopy='xclip -selection clipboard'
+fi
+
+if [ $(uname) != 'Darwin' ]; then
+	alias pbpaste='xclip -selection clipboard -o'
+fi
